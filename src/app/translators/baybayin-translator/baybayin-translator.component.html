@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="card">
+        <div>
+            <span class="heading selected">{{inputWriting}}</span>
+        </div>
+        <div class="text-area from">
+            <fa-icon class="close" [icon]="faClose" [hidden]="hideClearButton()" (click)="clearAllText()"></fa-icon>
+            <textarea
+                  id="input-text"
+                  cols="20"
+                  rows="5"
+                  placeholder="Enter your text here"
+                  [(ngModel)]="inputText"
+                  (input)="translateText()"
+            >
+            </textarea>
+            <div class="chars"><span>{{ getInputTextLength() }}</span> / {{ inputTextMaxLimit }}</div>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="swap-position">
+            <fa-icon [icon]="faExchangeAlt" (click)="swapWriting()"></fa-icon>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <span class="heading">{{outputWriting}}</span>
+        </div>
+        <div class="text-area to">
+            <textarea
+                    id="output-text"
+                    cols="20"
+                    rows="5"
+                    placeholder="Translated text will appear here"
+                    disabled
+                    [(ngModel)]="translatedText"
+            >
+            </textarea>
+            <fa-icon class="copy" [icon]="faCopy" [hidden]="hideCopyButton()" (click)="copyTranslatedText()"></fa-icon>
+        </div>
+    </div>
+</div>

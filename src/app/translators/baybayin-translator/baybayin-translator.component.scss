@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to a new line if necessary */
+  justify-content: space-between;
+}
+
+.container .card {
+  flex: 1 1 45%;
+  padding: 25px;
+}
+
+@media (max-width: 768px) {
+  .container .card {
+    flex-basis: 100%; /* Stack the divs on top of each other */
+  }
+}
+
+.container .card .heading {
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.container .card .selected {
+  color: rgb(26, 115, 232);
+}
+
+.container .card .from {
+  border: 1px solid #bbb;
+  border-radius: 7px;
+}
+
+.container .card .to {
+  background-color: #ddd;
+  border-radius: 7px;
+}
+
+.container .text-area {
+  position: relative;
+}
+
+.container textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border: none;
+  color: #111;
+  font-size: 20px;
+}
+
+.container .text-area .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.container .text-area .chars {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.container .text-area .copy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.swap-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #888;
+}
+
