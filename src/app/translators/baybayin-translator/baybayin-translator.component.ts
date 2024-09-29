@@ -1,10 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {BaybayinService} from "../../services/baybayin.service";
 import { FormsModule } from '@angular/forms';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { faCopy, faExchangeAlt, faClose } from '@fortawesome/free-solid-svg-icons';
 import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
-import {MetaService} from "../../services/meta.service";
 
 @Component({
   selector: 'app-baybayin-translator',
@@ -13,7 +12,7 @@ import {MetaService} from "../../services/meta.service";
   templateUrl: './baybayin-translator.component.html',
   styleUrl: './baybayin-translator.component.scss'
 })
-export class BaybayinTranslatorComponent implements OnInit {
+export class BaybayinTranslatorComponent {
   inputText: string = '';
   translatedText: string = '';
   inputWriting: string = 'Filipino';
@@ -24,16 +23,7 @@ export class BaybayinTranslatorComponent implements OnInit {
   faClose = faClose;
 
   constructor(private baybayinService: BaybayinService,
-              private metaService: MetaService,
               private clipboard: Clipboard) {
-  }
-
-  async ngOnInit() {
-    this.metaService.UpdateTags({
-      title: "Baybayin Translator",
-      description: `Translate Filipino to Baybayin and Baybayin to Filipino`,
-      image: 'assets/baybayin.png'
-    });
   }
 
   translateText() {
