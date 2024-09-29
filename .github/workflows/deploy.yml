@@ -35,3 +35,7 @@ jobs:
       - name: Deploy to server
         run: |
           scp -o StrictHostKeyChecking=no -r ./dist/batingaw-apps/browser/* sonny@167.172.171.3:/home/sonny/tmp
+
+      - name: Move files to web directory with sudo
+        run: |
+          ssh -o StrictHostKeyChecking=no sonny@167.172.171.3 "sudo mv /home/sonny/tmp/* /var/www/batingaw.com/baybayin"
