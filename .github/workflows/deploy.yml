@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Angular app
         run: |
-          ng build --prod
+          ng build --base-href /baybayin/
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.7.0
