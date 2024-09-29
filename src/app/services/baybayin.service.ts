@@ -8,6 +8,8 @@ export class BaybayinService {
   private latinBaybayinCharMap = [
     { latin: "ng", baybayin: "\u1705" },
     { latin: "k", baybayin: "\u1703" },
+    { latin: "c", baybayin: "\u1703" },
+    { latin: "q", baybayin: "\u1703" },
     { latin: "g", baybayin: "\u1704" },
     { latin: "t", baybayin: "\u1706" },
     { latin: "d", baybayin: "\u1707" },
@@ -16,12 +18,16 @@ export class BaybayinService {
     { latin: "p", baybayin: "\u1709" },
     { latin: "f", baybayin: "\u1709" },
     { latin: "b", baybayin: "\u170A" },
+    { latin: "v", baybayin: "\u170A" },
     { latin: "m", baybayin: "\u170B" },
     { latin: "y", baybayin: "\u170C" },
     { latin: "l", baybayin: "\u170E" },
     { latin: "w", baybayin: "\u170F" },
     { latin: "s", baybayin: "\u1710" },
+    { latin: "z", baybayin: "\u1710" },
     { latin: "h", baybayin: "\u1711" },
+    { latin: "j", baybayin: "\u1707\u1714\u170C" },
+    { latin: "x", baybayin: "\u1703\u1714\u1710" },
   ]
 
   private vowelMap = [
