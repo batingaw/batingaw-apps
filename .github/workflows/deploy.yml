@@ -30,7 +30,7 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.7.0
         with:
-          ssh-private-key: ${{ secrets.INDIGO }}
+          ssh-private-key: ${{ secrets.INDIGO_PRIVATE_KEY }}
 
       - name: Deploy to server
         run: |
