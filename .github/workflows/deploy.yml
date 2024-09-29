@@ -38,4 +38,4 @@ jobs:
 
       - name: Move files to web directory with sudo
         run: |
-          ssh -o StrictHostKeyChecking=no sonny@167.172.171.3 "sudo mv /home/sonny/tmp/* /var/www/batingaw.com/baybayin"
+          ssh -o StrictHostKeyChecking=no sonny@167.172.171.3 "echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S mv /home/sonny/tmp/* /var/www/batingaw.com/baybayin"
