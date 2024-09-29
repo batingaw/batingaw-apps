@@ -12,6 +12,7 @@
                   placeholder="Enter your text here"
                   [(ngModel)]="inputText"
                   (input)="translateText()"
+                  [maxLength]="inputTextMaxLimit"
             >
             </textarea>
             <div class="chars"><span>{{ getInputTextLength() }}</span> / {{ inputTextMaxLimit }}</div>

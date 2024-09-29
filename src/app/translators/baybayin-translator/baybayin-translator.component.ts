@@ -17,7 +17,7 @@ export class BaybayinTranslatorComponent {
   translatedText: string = '';
   inputWriting: string = 'Filipino';
   outputWriting: string = 'Baybayin';
-  inputTextMaxLimit: number = 1000;
+  inputTextMaxLimit: number = 500;
   faCopy = faCopy;
   faExchangeAlt = faExchangeAlt;
   faClose = faClose;
