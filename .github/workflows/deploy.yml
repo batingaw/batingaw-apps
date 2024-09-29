@@ -32,11 +32,6 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.INDIGO_PRIVATE_KEY }}
 
-      - name: Check server reachability
-        run: |
-          ping -c 4 167.172.171.3
-          nc -zv 167.172.171.3
-
       - name: Deploy to server
         run: |
           scp -o StrictHostKeyChecking=no -r ./dist/batingaw-apps/browser/* sonny@167.172.171.3:/var/www/batingaw.com/baybayin
