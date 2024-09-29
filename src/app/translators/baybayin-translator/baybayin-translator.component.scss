@@ -7,8 +7,6 @@
 
 .container {
   position: relative;
-  width: 1200px;
-  padding: 0 20px;
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap to a new line if necessary */
   justify-content: space-between;
@@ -16,7 +14,7 @@
 
 .container .card {
   flex: 1 1 45%;
-  padding: 25px;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -97,7 +95,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 10px;
+  top: -5px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
