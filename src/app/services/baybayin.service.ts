@@ -61,6 +61,7 @@ export class BaybayinService {
     { from: "ku", to: "ko" },
     { from: "mu", to: "mo" },
     { from: "tayu", to: "tayo" },
+    { from: "uu", to: "oo" },
   ]
 
       constructor() { }
