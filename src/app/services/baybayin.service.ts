@@ -45,7 +45,15 @@ export class BaybayinService {
       ]
   );
 
-  constructor() { }
+  private wordFixMap = [
+    { from: "bubu", to: "bobo" },
+    { from: "pidu", to: "pero" },
+    { from: "bunduk", to: "bundok" },
+    { from: "dadwin", to: "darwin" },
+    { from: "dabilas", to: "rabilas" },
+  ]
+
+      constructor() { }
 
   translateToBaybayin(inputText: string): string {
     let translatedText = inputText.toLowerCase();
@@ -94,6 +102,7 @@ export class BaybayinService {
     translatedText = this.translateBaybayinSingleConsonants(translatedText);
     translatedText = this.translateBaybayinSyllables(translatedText, "a");
     translatedText = this.translateBaybayinVowels(translatedText);
+    translatedText = this.fixTranslatedWords(translatedText);
 
     return translatedText;
   }
@@ -131,6 +140,15 @@ export class BaybayinService {
     this.latinBaybayinCharMap.forEach(mapping => {
       let regex = new RegExp(`${mapping.baybayin}${this.kudlitMap.get("")}`, 'g');
       outputText = outputText.replace(regex, mapping.latin);
+    });
+    return outputText;
+  }
+
+  fixTranslatedWords(text: string) {
+    let outputText = text;
+    this.wordFixMap.forEach(mapping => {
+      let regex = new RegExp(`${mapping.from}`, 'g');
+      outputText = outputText.replace(regex, mapping.to);
     });
     return outputText;
   }
