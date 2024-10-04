@@ -48,11 +48,19 @@ export class BaybayinService {
   private wordFixMap = [
     { from: "bubu", to: "bobo" },
     { from: "pidu", to: "pero" },
+    { from: "pida", to: "pera" },
+    { from: "puwidi", to: "puwede" },
+    { from: "pwidi", to: "pwede" },
+    { from: "puidi", to: "puede" },
+    { from: "didi", to: "dede" },
     { from: "bunduk", to: "bundok" },
     { from: "dadwin", to: "darwin" },
     { from: "dabilas", to: "rabilas" },
     { from: "guapu", to: "guapo" },
     { from: "aku", to: "ako" },
+    { from: "ku", to: "ko" },
+    { from: "mu", to: "mo" },
+    { from: "tayu", to: "tayo" },
   ]
 
       constructor() { }
