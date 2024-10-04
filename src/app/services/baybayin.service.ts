@@ -51,6 +51,8 @@ export class BaybayinService {
     { from: "bunduk", to: "bundok" },
     { from: "dadwin", to: "darwin" },
     { from: "dabilas", to: "rabilas" },
+    { from: "guapu", to: "guapo" },
+    { from: "aku", to: "ako" },
   ]
 
       constructor() { }
@@ -147,8 +149,8 @@ export class BaybayinService {
   fixTranslatedWords(text: string) {
     let outputText = text;
     this.wordFixMap.forEach(mapping => {
-      let regex = new RegExp(`${mapping.from}`, 'g');
-      outputText = outputText.replace(regex, mapping.to);
+      const regex = new RegExp(`(^|\\s)${mapping.from}(\\s|$)`, 'gi');
+      outputText = outputText.replace(regex, `$1${mapping.to}$2`);
     });
     return outputText;
   }
