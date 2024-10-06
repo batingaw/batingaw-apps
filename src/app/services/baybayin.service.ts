@@ -62,6 +62,8 @@ export class BaybayinService {
     { from: "mu", to: "mo" },
     { from: "tayu", to: "tayo" },
     { from: "uu", to: "oo" },
+    { from: "pu", to: "po" },
+    { from: "upu", to: "opo" },
     { from: "pinuy", to: "pinoy" },
   ]
 
