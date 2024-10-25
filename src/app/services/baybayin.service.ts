@@ -53,9 +53,8 @@ export class BaybayinService {
     { from: "tayu", to: "tayo" }, { from: "uu", to: "oo" }, { from: "pu", to: "po" },
     { from: "pinuy", to: "pinoy" }, { from: "kubu", to: "kubo" }, { from: "duun", to: "doon" }, { from: "sadi-sadi", to: "sari-sari" },
     { from: "talung", to: "talong" }, { from: "sigadilyas", to: "sigarilyas" }, { from: "kundul", to: "kundol" },
-    { from: "patula", to: "patola" },
-    { from: "mayduun", to: "mayroon" },
-    { from: "labanus", to: "labanos" },
+    { from: "patula", to: "patola" }, { from: "mayduun", to: "mayroon" }, { from: "labanus", to: "labanos" },
+    { from: "pudu", to: "puro" },
   ]
 
       constructor() { }
