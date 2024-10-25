@@ -162,7 +162,7 @@ export class BaybayinService {
   fixTranslatedWords(text: string) {
     let outputText = text;
     this.wordFixMap.forEach(mapping => {
-      const regex = new RegExp(`(^|\\s)${mapping.from}(\\s|$)`, 'gi');
+      const regex = new RegExp(`(^|\\W)${mapping.from}(\\W|$)`, 'gi');
       outputText = outputText.replace(regex, `$1${mapping.to}$2`);
     });
     return outputText;
