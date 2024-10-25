@@ -52,10 +52,10 @@ export class BaybayinService {
     { from: "guapu", to: "guapo" }, { from: "aku", to: "ako" }, { from: "ku", to: "ko" }, { from: "mu", to: "mo" },
     { from: "tayu", to: "tayo" }, { from: "uu", to: "oo" }, { from: "pu", to: "po" },
     { from: "pinuy", to: "pinoy" }, { from: "kubu", to: "kubo" }, { from: "duun", to: "doon" }, { from: "sadi-sadi", to: "sari-sari" },
-    { from: "talung", to: "talong" },
-    { from: "sigadilyas", to: "sigarilyas" },
-    { from: "kundul", to: "kundol" },
+    { from: "talung", to: "talong" }, { from: "sigadilyas", to: "sigarilyas" }, { from: "kundul", to: "kundol" },
     { from: "patula", to: "patola" },
+    { from: "mayduun", to: "mayroon" },
+    { from: "labanus", to: "labanos" },
   ]
 
       constructor() { }
