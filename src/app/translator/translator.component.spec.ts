@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BaybayinTranslatorComponent } from './baybayin-translator.component';
+import { TranslatorComponent } from './translator.component';
 
 describe('BaybayinTranslatorComponent', () => {
-  let component: BaybayinTranslatorComponent;
-  let fixture: ComponentFixture<BaybayinTranslatorComponent>;
+  let component: TranslatorComponent;
+  let fixture: ComponentFixture<TranslatorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BaybayinTranslatorComponent]
+      imports: [TranslatorComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BaybayinTranslatorComponent);
+    fixture = TestBed.createComponent(TranslatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,7 +1,14 @@
 <div class="container">
     <div class="card">
-        <div>
+        <div *ngIf="isFilipino(inputWriting)">
             <span class="heading selected">{{inputWriting}}</span>
+        </div>
+        <div *ngIf="!isFilipino(inputWriting)">
+            <select id="inputWritingSelect" [(ngModel)]="inputWriting" (ngModelChange)="onScriptChange()">
+                <option *ngFor="let script of scripts" [value]="script">
+                    {{ script }}
+                </option>
+            </select>
         </div>
         <div class="text-area from">
             <fa-icon class="close" [icon]="faClose" [hidden]="hideClearButton()" (click)="clearAllText()"></fa-icon>
@@ -26,8 +33,15 @@
     </div>
 
     <div class="card">
-        <div>
-            <span class="heading">{{outputWriting}}</span>
+        <div *ngIf="isFilipino(outputWriting)">
+            <span class="heading selected">{{outputWriting}}</span>
+        </div>
+        <div *ngIf="!isFilipino(outputWriting)">
+            <select id="outputWritingSelect" [(ngModel)]="outputWriting" (ngModelChange)="onScriptChange()">
+                <option *ngFor="let script of scripts" [value]="script">
+                    {{ script }}
+                </option>
+            </select>
         </div>
         <div class="text-area to">
             <textarea
