@@ -78,4 +78,8 @@ export class TranslatorComponent {
   onScriptChange(): void {
     this.translateText();
   }
+
+  onInputScriptChange(): void {
+    this.clearAllText();
+  }
 }

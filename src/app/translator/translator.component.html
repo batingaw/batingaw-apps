@@ -4,7 +4,7 @@
             <span class="heading selected">{{inputWriting}}</span>
         </div>
         <div *ngIf="!isFilipino(inputWriting)">
-            <select id="inputWritingSelect" [(ngModel)]="inputWriting" (ngModelChange)="onScriptChange()">
+            <select id="inputWritingSelect" [(ngModel)]="inputWriting" (ngModelChange)="onInputScriptChange()">
                 <option *ngFor="let script of scripts" [value]="script">
                     {{ script }}
                 </option>
