@@ -1,6 +1,7 @@
 # BatingawApps
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+This project is baybayin translator. 
 
 ## Development server
 
